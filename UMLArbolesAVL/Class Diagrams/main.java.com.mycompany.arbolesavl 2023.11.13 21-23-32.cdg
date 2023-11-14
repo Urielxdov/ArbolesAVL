@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="main.java.com.mycompany.arbolesavl">
+  <ClassDiagramComponents>
+    <Class name="ArbolAVL" package="com.mycompany.arbolesavl" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="raiz" type="NodoArbol&lt;T&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getRaiz" returnType="NodoArbol&lt;T&gt;" visibility="public"/>
+        <Method name="add" returnType="void" visibility="public">
+          <Argument type="T" name="i"/>
+        </Method>
+        <Method name="add" returnType="void" visibility="private">
+          <Argument type="NodoArbol&lt;T&gt;" name="r"/>
+          <Argument type="T" name="i"/>
+        </Method>
+        <Method name="altura" returnType="int" visibility="public"/>
+        <Method name="altura" returnType="int" visibility="private">
+          <Argument type="NodoArbol&lt;T&gt;" name="r"/>
+        </Method>
+        <Method name="size" returnType="int" visibility="public"/>
+        <Method name="size" returnType="int" visibility="private">
+          <Argument type="NodoArbol&lt;T&gt;" name="r"/>
+        </Method>
+        <Method name="FE" returnType="int" visibility="public">
+          <Argument type="NodoArbol&lt;T&gt;" name="r"/>
+        </Method>
+        <Method name="balancear" returnType="void" visibility="private">
+          <Argument type="NodoArbol&lt;T&gt;" name="r"/>
+        </Method>
+        <Method name="eleminarNodo" returnType="void" visibility="public">
+          <Argument type="T" name="valor"/>
+        </Method>
+        <Method name="buscarNodo" returnType="NodoArbol&lt;T&gt;" visibility="public">
+          <Argument type="T" name="valor"/>
+        </Method>
+        <Method name="buscarNodo" returnType="NodoArbol&lt;T&gt;" visibility="private">
+          <Argument type="T" name="valor"/>
+          <Argument type="NodoArbol&lt;T&gt;" name="nodo"/>
+        </Method>
+        <Method name="manejarEliminaciones" returnType="void" visibility="private">
+          <Argument type="NodoArbol&lt;T&gt;" name="nodo"/>
+        </Method>
+        <Method name="eliminarNodoHoja" returnType="NodoArbol&lt;T&gt;" visibility="private">
+          <Argument type="NodoArbol&lt;T&gt;" name="nodoHoja"/>
+        </Method>
+        <Method name="eliminarConUnHijo" returnType="NodoArbol&lt;T&gt;" visibility="private">
+          <Argument type="NodoArbol&lt;T&gt;" name="nodoPadre"/>
+        </Method>
+        <Method name="eliminarRaiz" returnType="NodoArbol&lt;T&gt;" visibility="private">
+          <Argument type="NodoArbol&lt;T&gt;" name="nuevoPadre"/>
+        </Method>
+        <Method name="eliminarConDosHijos" returnType="NodoArbol&lt;T&gt;" visibility="private">
+          <Argument type="NodoArbol&lt;T&gt;" name="nodoPadre"/>
+        </Method>
+        <Method name="quitarMayor" returnType="NodoArbol&lt;T&gt;" visibility="private">
+          <Argument type="NodoArbol&lt;T&gt;" name="nodo"/>
+        </Method>
+        <Method name="numeroDeHijos" returnType="int" visibility="private">
+          <Argument type="NodoArbol&lt;T&gt;" name="nodo"/>
+        </Method>
+        <Method name="rotacionII" returnType="void" visibility="private">
+          <Argument type="NodoArbol&lt;T&gt;" name="nodo"/>
+        </Method>
+        <Method name="rotacionDD" returnType="void" visibility="private">
+          <Argument type="NodoArbol&lt;T&gt;" name="nodo"/>
+        </Method>
+        <Method name="rotacionID" returnType="void" visibility="private">
+          <Argument type="NodoArbol&lt;T&gt;" name="nodo"/>
+        </Method>
+        <Method name="rotacionDI" returnType="void" visibility="private">
+          <Argument type="NodoArbol&lt;T&gt;" name="nodo"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="obtenerHojas" returnType="ListaSimple&lt;NodoArbol&lt;T&gt;&gt;" visibility="public"/>
+        <Method name="obtenerHojas" returnType="void" visibility="private">
+          <Argument type="NodoArbol&lt;T&gt;" name="nodo"/>
+          <Argument type="ListaSimple&lt;NodoArbol&lt;T&gt;&gt;" name="hojas"/>
+        </Method>
+        <Method name="numeroDeNodos" returnType="int" visibility="public"/>
+        <Method name="numeroDeNodos" returnType="int" visibility="private">
+          <Argument type="NodoArbol&lt;T&gt;" name="nodo"/>
+        </Method>
+        <Method name="inOrden" returnType="String" visibility="private">
+          <Argument type="NodoArbol&lt;T&gt;" name="r"/>
+        </Method>
+        <Method name="preOrden" returnType="String" visibility="private">
+          <Argument type="NodoArbol&lt;T&gt;" name="r"/>
+        </Method>
+        <Method name="postOrden" returnType="String" visibility="private">
+          <Argument type="NodoArbol&lt;T&gt;" name="r"/>
+        </Method>
+        <Method name="imprimirIzquierda" returnType="void" visibility="public"/>
+        <Method name="imprimirIzquierda" returnType="void" visibility="public">
+          <Argument type="NodoArbol&lt;T&gt;" name="raiz"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ArbolesAVL" package="com.mycompany.arbolesavl" visibility="public" xPosition="584.0" yPosition="354.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ListaSimple" package="com.mycompany.arbolesavl" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="inicio" type="NodoDoble&lt;T&gt;" visibility="private"/>
+        <Field name="tamaño" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="add" returnType="void" visibility="public">
+          <Argument type="T" name="val"/>
+        </Method>
+        <Method name="remove" returnType="NodoDoble&lt;T&gt;" visibility="public"/>
+        <Method name="addFirst" returnType="void" visibility="public">
+          <Argument type="T" name="nombre"/>
+        </Method>
+        <Method name="addX" returnType="void" visibility="public">
+          <Argument type="T" name="valor"/>
+          <Argument type="int" name="pos"/>
+        </Method>
+        <Method name="add" returnType="void" visibility="public">
+          <Argument type="NodoDoble&lt;T&gt;" name="nodo"/>
+        </Method>
+        <Method name="addFirst" returnType="void" visibility="public">
+          <Argument type="NodoDoble&lt;T&gt;" name="nodo"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="NodoArbol" package="com.mycompany.arbolesavl" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="dato" type="T" visibility="public"/>
+        <Field name="izq" type="NodoArbol&lt;T&gt;" visibility="public"/>
+        <Field name="der" type="NodoArbol&lt;T&gt;" visibility="public"/>
+        <Field name="padre" type="NodoArbol&lt;T&gt;" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="T" name="dato"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="com.mycompany.arbolesavl.ArbolAVL" target="com.mycompany.arbolesavl.NodoArbol" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
